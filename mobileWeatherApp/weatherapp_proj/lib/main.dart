@@ -63,6 +63,11 @@ class _TabBarExampleState extends State<TabBarExample>
         ),
         title: TextField(
           controller: _inputController,
+          onSubmitted: (input) {
+            setState(() {
+              value = input;
+            });
+          },
         ),
         actions: <Widget>[
           IconButton(
